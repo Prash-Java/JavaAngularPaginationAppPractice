@@ -24,7 +24,7 @@ public class UserResource {
     public ResponseEntity<HttpResponse> getUsers(@RequestParam Optional<String> name,
                                                  @RequestParam Optional<Integer> page,
                                                  @RequestParam Optional<Integer> size) throws InterruptedException {
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(1);
         return ResponseEntity.ok().body(
                 HttpResponse.builder()
                         .timeStamp(now().toString())
